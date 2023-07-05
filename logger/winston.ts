@@ -61,7 +61,7 @@ const datadogTransporter = async (payload: any) => {
                 }
             )
             .then((response) => {
-                console.log('Response on transport success', response);
+                console.log('Response on transport success');
             })
             .catch((error) => {
                 console.log('Error on transport', error);
