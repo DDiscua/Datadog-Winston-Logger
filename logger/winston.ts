@@ -35,7 +35,7 @@ const datadogTransporter = async (payload: any) => {
     }
 
     const { level, message, timestamp, metadata, sendLog } = payload;
-    const messageDate = `[telegram-bot]${message}[${new Date().toISOString()}]`;
+    const messageDate = `[${APPLICATION_NAME}]${message}[${new Date().toISOString()}]`;
 
     if (sendLog || level === 'error' || level === 'warn') {
         const data = [
