@@ -1,0 +1,36 @@
+{
+	"id": 124328412,
+	"name": "Monitor Alert Tutorial",
+	"type": "log alert",
+	"query": "logs(\"service:DataDogAppTest_DEV status:error\").index(\"*\").rollup(\"count\").last(\"1m\") >= 2",
+	"message": "This is a Monitor Alert test.\n\n1. Following log has been detected in :\n\n2. **Status**: {{status.name}}\n3. **Metadata**: {{log.attributes.metadata}}\n4. **Message**: {{log.message}}\n5. **Service**: {{log.service}}\n6. **Status**: {{log.status}} \n7. **Source**: {{log.source}}\n8. **SpanId**: {{log.span_id}} \n9. **Timestamp**: {{log.timestamp}} \n10. **Log link**: {{log.link}} @all",
+	"tags": [],
+	"options": {
+		"thresholds": {
+			"critical": 2,
+			"period": {
+				"digit": 1,
+				"name": "1 minute average",
+				"no_data_timeframe": 2,
+				"seconds": 60,
+				"tense": "last",
+				"text": "1 minute",
+				"unit": "minutes",
+				"value": "last_1m",
+				"timeString": "1m",
+				"unitAbbreviation": "m"
+			},
+			"timeAggregator": "avg",
+			"warning": 1,
+			"comparison": ">="
+		},
+		"enable_logs_sample": false,
+		"notify_audit": false,
+		"restriction_query": null,
+		"on_missing_data": "default",
+		"include_tags": false,
+		"silenced": {}
+	},
+	"priority": null,
+	"restricted_roles": null
+}
