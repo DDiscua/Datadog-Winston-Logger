@@ -13,10 +13,9 @@ Use the following command to start the project
 
 Follow the .env-example file
 
-ENV=DEV
+- ENV=DEV
+- DATADOG_ENABLED_LOGS:  To active the logs and send to DataDog
+- APPLICATION_NAME: Name of your application
+- DATADOG_API_KEY_DEV: Your application API KEY
+- DATADOG_APP_KEY_DEV: Leave blank 
 
-# Logger
-DATADOG_ENABLED_LOGS:  To active the logs and send to DataDog
-APPLICATION_NAME: Name of your application
-DATADOG_API_KEY_DEV: Your application API KEY
-DATADOG_APP_KEY_DEV: Leave blank
